@@ -1,0 +1,14 @@
+{
+    "name": "cloud-server",
+    "version": "1.0.0",
+    "description": "Node.js server for WebSocket and API forwarding",
+    "main": "server.js",
+    "scripts": {
+      "start": "node server.js"
+    },
+    "dependencies": {
+      "express": "^4.18.2",
+      "ws": "^8.13.0"
+    }
+  }
+  
