@@ -26,7 +26,7 @@ def on_open(ws):
 
 def connect():
     ws = websocket.WebSocketApp(
-        "wss://你的云端服务器/ws",
+        "wss://mserver-production-14ce.up.railway.app/ws",
         on_message=on_message,
         on_error=on_error,
         on_close=on_close,

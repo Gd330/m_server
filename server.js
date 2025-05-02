@@ -1,3 +1,4 @@
+
 const express = require('express');
 const WebSocket = require('ws');
 
@@ -25,7 +26,7 @@ wss.on('connection', (ws) => {
 
 app.use(express.json());
 
-app.post('/api/send_all', (req, res) => {
+app.get('/api/send_all', (req, res) => {
   const body = req.body;
   console.log('收到第三方请求:', body);
 
