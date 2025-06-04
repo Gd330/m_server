@@ -27,14 +27,15 @@ wss.on('connection', (ws) => {
 app.use(express.json());
 
 app.get('/api/send_all', (req, res) => {
-  const body = req.body;
-  console.log('收到第三方请求:', body);
+  const query = req.query;
+  console.log('收到第三方 GET 请求:', query);
 
   clients.forEach(client => {
     if (client.readyState === WebSocket.OPEN) {
-      client.send(JSON.stringify(body));
+      client.send(JSON.stringify(query));
     }
   });
 
-  res.json({ status: 'ok', message: '指令已推送到本地服务器' });
+  res.json({ status: 'ok', message: 'GET 指令已推送到本地服务器' });
 });
+
